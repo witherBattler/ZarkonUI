@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+
+
+
+#leftBar {
+    width: 300px;
+    height: 97.5vh;
+    background-color: #333333;
+    display: inline-block;
+    text-align: center;
+}
+
+#leftBarTop {
+    background-color: rgb(41,128,185);
+    height: 20%;
+    margin-top: -2vh;
+    text-align: center;
+}
+
+#leftBarTop h3 {
+    font-family: 'Baloo Tammudu 2', cursive;
+    font-size: 40px;
+    width: 100%;
+    line-height: 40px;
+    padding-top: 3vh;
+    margin-top: 2vh;
+    border-bottom: #333333 solid 2px;
+}
+
+#leftBarTop h4 {
+    font-family: 'Baloo Tammudu 2', cursive;
+    line-height: 40px;
+    margin-top: 0px;
+    padding-top: 0px;
+}
+
+.articleLinkLeftBar {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.articleCategory {
+    margin-top: 10px;
+}
