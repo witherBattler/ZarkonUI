@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
 body {
     background-color: rgb(175, 175, 175);
@@ -48,6 +50,7 @@ body {
     line-height: 30px;
     margin-right: 5px;
     color: rgb(175, 175, 175);
+    font-family: 'Lato', sans-serif;
 }
 
 .articleLinkLeftBar:hover {
@@ -64,6 +67,8 @@ body {
     margin-right: 5px;
     margin-bottom: 5px;
     border-top: rgb(100, 100, 100) solid 2px;
+    font-family: 'Lato', sans-serif;
+    padding-left: 0px !important;
 }
 
 #homeButtonLeftBar {
@@ -78,10 +83,33 @@ body {
     position: absolute;
     top: 1vh;
     margin-left: 0.5vw;
+
 }
 
-#mainArticle {
+#mainArticleSide h1, h2, p {
+    padding-left: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+#mainArticleSide ul {
     margin-left: 30px;
+    font-family: 'Lato', sans-serif;
+}
+
+#mainArticleSide h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    width: 97.6%;
+    border-bottom: rgb(0, 0, 0) solid 2px;
+}
+
+#mainArticleSide h2 {
+    font-family: 'Roboto Slab', serif;
+    margin-top: -20px;
+}
+
+#mainArticleSide p {
+    width: 800px;
 }
 
 ::-webkit-scrollbar {
@@ -93,7 +121,7 @@ body {
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #888; 
+    background: rgb(100, 100, 100); 
 }
   
 ::-webkit-scrollbar-thumb:hover {
