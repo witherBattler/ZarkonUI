@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>ZarkonUI</title>
-        <link rel="stylesheet" href="mainPageStyle.css">
+        <link rel="stylesheet" href="../../mainPageStyle.css">
     </head>
     <body>
         <div id="leftBar">
@@ -11,7 +11,7 @@
                 <h4>By IMPixel</h4>
             </div>
             <div id="documentation">
-                <a id="homeButtonLeftBar" class="articleLinkLeftBar" href="">Home</a>
+                <a id="homeButtonLeftBar" class="articleLinkLeftBar" href="../../">Home</a>
                 <p class="articleCategory">Tips</p>
                 <a class="articleLinkLeftBar" href="/documentation/gettingStarted">Getting started</a>
                 <a class="articleLinkLeftBar" href="/documentation/learnEasier">How to learn easier</a>
@@ -37,22 +37,34 @@
             </div>
         </div>
         <div id="mainArticleSide">
-            <h1>ZarkonUI</h1>
-            <h2 class="topBorder">Why use ZarkonUI?</h2>
-            <p>
-                ZarkonUI is a useful code.org library for easily creating UI on a GameLab canvas. Its syntax is easy to understand
-                and it has a lot of features that will help you in creating clean UI. This library:
-            </p>
-            <ul>
-                <li>Gives you access to element IDs</li>
-                <li>Has working events</li>
-                <li>Very customizable</li>
-                <li>Has screens, allowing you to render only a set of elements at once</li>
-                <li>Very advanced rendering methods, that would take a lot of time to recreate</li>
-                <li>Much more!</li>
-            </ul>
-            <p>This website contains the documentation for ZarkonUI as well as practical examples that can help you learn it.</p>
-            <p>Note that you don't have to learn the whole library at once! You can learn only a few functions and be able to create your UI easily. The syntax is made to be easily understandable for everyone. It is explained well in the description for every function, and if you don't understand something, I am free to help on Discord, IMPixel#3007. To learn the library better, consider reading the "How to learn easier" article.</p>
+            <h1>Getting Started</h1>
+            <h2>How to get started with ZarkonUI?</h2>
+            <p>Getting started with ZarkonUI isn't hard at all. It is explained in detail how to setup this library.</p>
+            <ol>
+                <li>Copy this library id: <code>fk-LrgO0Zblzz4F10BV6Gmd3l_8mKLH-7sRe6gXz2Vg</code></li>
+                <li>Go to the project you want to add the library in</li>
+                <li>Press the gear icon (It's near the toolbox)</li>
+                <li>Choose "Manage Libraries"</li>
+                <li>In the input bar at the bottom of the popup, paste the library id you had copied in step one</li>
+                <li>Press "Add"</li>
+                <li>You have successfully setup the library! You can now use all of its functions.</li>
+            </ol>
+            <p>Once you have this done, you should be able to use ZarkonUI's functions. To test if ZarkonUI is working, write this in the code editor:</p>
+            <figcaption>Zarkonui</figcaption>
+<pre>
+var myButton = new ZarkonUI.Button(200, 200, 300, 80);
+myButton.sprite.shapeColor = "#4287f5";
+myButton.text.value = "Hello World";
+var myScreen = new ZarkonUI.Screen();
+myScreen.addElement(myButton);
+ZarkonUI.setCurrentScreen(myScreen);
+function draw() {
+    ZarkonUI.manage();
+}
+</pre>
+            <p>If your result looks like this, you have done everything right! You can now start using ZarkonUI. You can read the documentations to help yourself learning.</p>
+            <figcaption class="figcap400">Zarkonui</figcaption>
+            <img src="workingExample.png">
         </div>
     </body>
 </html>

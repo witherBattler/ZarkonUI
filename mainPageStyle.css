@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap');
+@font-face {
+    font-family: metalic;
+    src: url(fonts/metalic.ttf);
+}
 
 body {
     background-color: rgb(175, 175, 175);
@@ -24,6 +29,8 @@ body {
     margin-top: -2vh;
     text-align: center;
 }
+
+
 
 #leftBarTop h3 {
     font-family: 'Baloo Tammudu 2', cursive;
@@ -75,6 +82,8 @@ body {
     margin-top: 10px;
 }
 
+
+
 #mainArticleSide {
     background-color: white;
     width: 78.7%;
@@ -83,17 +92,54 @@ body {
     position: absolute;
     top: 1vh;
     margin-left: 0.5vw;
-
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-#mainArticleSide h1, h2, p {
+#mainArticleSide h1, h2, p, code {
     padding-left: 30px;
     font-family: 'Lato', sans-serif;
 }
 
-#mainArticleSide ul {
+#mainArticleSide ul, ol, pre, img, figcaption {
     margin-left: 30px;
     font-family: 'Lato', sans-serif;
+}
+
+#mainArticleSide code {
+    font-family: 'DM Mono', monospace;
+    padding: 1px;
+    border:rgb(0, 0, 0) solid 2px;
+    background-color:rgb(221, 221, 221);
+    width: 800px;
+}
+
+#mainArticleSide figcaption {
+    font-family: metalic;
+    background-color: black;
+    color: white;
+    width: 809px;
+    margin-top: 0px;
+    padding-left: 15px;
+}
+
+.figcap400 {
+    width: 389px !important;
+}
+
+#mainArticleSide pre {
+    font-family: 'DM Mono', monospace;
+    padding: 10px;
+    border:rgb(0, 0, 0) solid 2px;
+    background-color:rgb(221, 221, 221);
+    width: 800px;
+    margin-top: 0px;
+}
+
+#mainArticleSide img {
+    border:rgb(0, 0, 0) solid 2px;
+    object-fit: contain;
+    width: 400px;
 }
 
 #mainArticleSide h1 {
@@ -111,6 +157,8 @@ body {
 #mainArticleSide p {
     width: 800px;
 }
+
+
 
 ::-webkit-scrollbar {
     width: 10px;
