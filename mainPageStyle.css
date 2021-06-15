@@ -156,8 +156,8 @@ body {
 
 #mainArticleSide h2 {
     font-family: 'Roboto Slab', serif;
-    margin-top: -20px;
-    margin-bottom: 0px;
+    margin-top: -25px;
+    margin-bottom: 5px;
 }
 
 #mainArticleSide p {
@@ -171,7 +171,18 @@ body {
     margin-bottom: 5px;
 }
 
+.comment {
+    color: seagreen;
+}
 
+.codeNote {
+    color: red;
+    font-family: 'DM Mono', monospace;
+}
+
+.secondh2 {
+    padding-top: 20px;
+}
 
 ::-webkit-scrollbar {
     width: 10px;
