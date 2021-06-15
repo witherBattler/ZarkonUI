@@ -92,16 +92,16 @@ body {
     position: absolute;
     top: 1vh;
     margin-left: 0.5vw;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
-#mainArticleSide h1, h2, p, code {
+#mainArticleSide h1, #mainArticleSide h2, #mainArticleSide h3, #mainArticleSide p, #mainArticleSide code {
     padding-left: 30px;
     font-family: 'Lato', sans-serif;
 }
 
-#mainArticleSide ul, ol, pre, img, figcaption {
+#mainArticleSide ul, #mainArticleSide ol, #mainArticleSide pre, #mainArticleSide img, #mainArticleSide figcaption {
     margin-left: 30px;
     font-family: 'Lato', sans-serif;
 }
@@ -157,10 +157,18 @@ body {
 #mainArticleSide h2 {
     font-family: 'Roboto Slab', serif;
     margin-top: -20px;
+    margin-bottom: 0px;
 }
 
 #mainArticleSide p {
     width: 800px;
+    margin-top: 0px;
+}
+
+#mainArticleSide h3 {
+    font-family: 'Roboto Slab', serif;
+    margin-top: 0px;
+    margin-bottom: 5px;
 }
 
 
