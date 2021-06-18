@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ZarkonUI</title>
+        <link rel="stylesheet" href="../../mainPageStyle.css">
+    </head>
+    <body>
+        <div id="leftBar">
+            <div id="leftBarTop">
+                <h3>ZarkonUI</h3>
+                <h4>By IMPixel</h4>
+            </div>
+            <div id="documentation">
+                <a id="homeButtonLeftBar" class="articleLinkLeftBar" href="../../">Home</a>
+                <p class="articleCategory">Tips</p>
+                <a class="articleLinkLeftBar" href="/documentation/gettingStarted">Getting started</a>
+                <a class="articleLinkLeftBar" href="/documentation/learnEasier">Learn easier</a>
+                <p class="articleCategory">UI elements</p>
+                <a class="articleLinkLeftBar" href="/documentation/button">Button()</a>
+                <a class="articleLinkLeftBar" href="/documentation/input">Input()</a>
+                <a class="articleLinkLeftBar" href="/documentation/slider">Slider()</a>
+                <a class="articleLinkLeftBar" href="/documentation/screen">Screen()</a>
+                <p class="articleCategory">Rendering</p>
+                <a class="articleLinkLeftBar" href="/documentation/drawElement">drawElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/drawScreen">drawScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/drawAllElements">drawAllElements()</a>
+                <p class="articleCategory">Reference</p>
+                <a class="articleLinkLeftBar" href="/documentation/getActiveElement">getActiveElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/setActiveElement">setActiveElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getCurrentScreen">getCurrentScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/setCurrentScreen">setCurrentScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getScreenById">getScreenById()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getElementById">getElementById()</a>
+                <a class="articleLinkLeftBar" href="/documentation/manageEventsForElement">manageEventsForElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/manage">manage()</a>
+            </div>
+        </div>
+        <div id="mainArticleSide">
+            <h1>Input()</h1>
+            <h2>Usage: new ZarkonUI.Input(x, y, width, height, id)</h2>
+            <p>This function creates a button element (An object) with multiple properties, such as event and border. You can see the properties of the button object down below. Consider checking out some example(s) as well. The best part about this function is the fact that it is very difficult to create without this library, and using this library for inputs brings multiple advantages, for example it registers button presses for EVERY button. It supports shift, backspace and a lot of special characters, such as \|/{}[]:">?`~. Another advantage is the smart key hold system. For example, if you hold a key, for example "s" for more than half a second it will start typing it multiple times, like on a normal input bar.</p>
+            <figcaption>Zarkonui</figcaption>
+<pre>
+elementType: "input" <span class="comment">//The type of the element.</span>
+id: "&ltid&gt" <span class="comment">//The id of the element</span> <span class="codeNote">*1</span>
+sprite: createSprite(x, y, width, height) <span class="comment">//The sprite of the input</span>
+event: { <span class="comment">//The events for the input</span>
+    mouseIsOver: function() {}, <span class="comment">//Mouse is over</span>
+    mouseIsOut: function() {}, <span class="comment">//Mouse is out</span>
+    mouseDown: function() {}, <span class="comment">//Mouse is down</span>
+    mouseUp: function() {}, <span class="comment">//Mouse is up</span>
+    mouseWentDown: function() {}, <span class="comment">//Mouse went down</span>
+    mouseWentUp: function() {} <span class="comment">//Mouse went up</span>
+}
+placeholder: { <span class="comment">//The placeholder configurations</span> <span class="codeNote">*2</span>
+    value: "", <span class="comment">//The text on the placeholder</span>
+    color: "#b5b5b5", <span class="comment">//The color of the placeholder</span>
+    font: "Arial", <span class="comment">//The font of the placeholder</span>
+    size: "35", <span class="comment">//The size of the placeholder</span>
+    outlineWeight: 0, <span class="comment">//The weight of the outline on the placeholder</span>
+    outlineColor: "red", <span class="comment">//The color of the outline on the placeholder</span>
+}
+text: { <span class="comment">//The text configurations</span> <span class="codeNote">*3</span>
+    value: "", <span class="comment">//The text on the input</span>
+    color: "#000000", <span class="comment">//The color of the text</span>
+    font: "Arial", <span class="comment">//The font of the text</span>
+    size: "35", <span class="comment">//The size of the text</span>
+    outlineWeight: 0, <span class="comment">//The weight of the outline on the text</span>
+    outlineColor: "red", <span class="comment">//The color of the outline on the text</span>
+}
+border: {
+    color: "#000000", <span class="comment">//The color of the border on the input</span>
+    width: 2 <span class="comment">//The width of the border on the input</span>
+}
+cursorSettings: {
+    color: "red", <span class="comment">//The color of the cursor on the input</span>
+    width: 2 <span class="comment">//The width of the cursor on the input</span>
+}
+clone: function(newId) { <span class="comment">/*Clones the input with a new ID*/</span> }
+group: createGroup()  <span class="comment">The group for the sprite of the input</span>
+draw: function() { <span class="comment">/*Draw the input*/</span> }
+
+</pre>
+                <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using Input() it will be a random 1000 characters long string.</span></p>
+                <p><span class="codeNote"> *2: The placeholder is only going to be displayed if the input isn't the active element and if there isn't any text on the input already.</span></p>
+                <p><span class="codeNote"> *3: The text is only going to be displayed if the element is active and/or if the input has any text on it. </span></p>
+                <h3><span class="codeNote">IMPORTANT NOTE: Before using input bars, you have to add this at the beginning of the code:</span></h3>
+                <figcaption>Zarkonui</figcaption>
+<pre>
+function keyTyped() {
+    ZarkonUI.keyTypedSetup();
+}
+
+function keyPressed() {
+    ZarkonUI.keyPressedSetup();
+}
+</pre>
+                <p>This is a very important part in using input bars. You can only put that code once, you don't have to repeat it everytime you want to use input bars.</p>
+                <h3>Example 1: Creating a normal input</h3><br>
+                <p>Code:</p>
+                <figcaption>Zarkonui</figcaption>
+<pre>
+function keyTyped() {
+  ZarkonUI.keyTypedSetup();
+}
+function keyPressed() {
+  ZarkonUI.keyPressedSetup();
+}
+var input = new ZarkonUI.Input(200, 200, 300, 50);
+input.border.width = 2;
+input.placeholder.value = "Your name";
+var screen = new ZarkonUI.Screen();
+screen.addElement(input);
+ZarkonUI.setCurrentScreen(screen);
+function draw() {
+  ZarkonUI.manage();
+}
+</pre>
+            <h3>Output:</h3>
+            <a class="aloneA" href="https://studio.code.org/projects/gamelab/b-lOp3Q8-kGi_PwNuuMSwGGaYLZ1NIKnZIJHIvUrIog/">Example</a>
+            <figcaption class="figcap400">Zarkonui</figcaption>
+            <img src="example1a.png"><br>
+            <h2 class="secondh2">In conclusion...</h2>
+            <p>Input elements are one of the best elements in ZarkonUI. They are very hard to recreate and ZarkonUI makes them easy to use. They have multiple extremely good features other UI libraries don't have and they're definitely a good thing you should use in your programs. Now that you're done learning about the Input() element, make sure you understand about it. Refer to <a href="../learnEasier/">this</a> for learning tips.</p>
+        </div>
+    </body>
+</html>

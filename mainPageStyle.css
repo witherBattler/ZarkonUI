@@ -96,7 +96,7 @@ body {
     overflow-x: hidden;
 }
 
-#mainArticleSide h1, #mainArticleSide h2, #mainArticleSide h3, #mainArticleSide p, #mainArticleSide code {
+#mainArticleSide h1, #mainArticleSide h2, #mainArticleSide h3, #mainArticleSide p, #mainArticleSide code, #mainArticleSide .aloneA {
     padding-left: 30px;
     font-family: 'Lato', sans-serif;
 }
@@ -130,6 +130,11 @@ body {
 
 .figcap400 {
     width: 389px !important;
+}
+
+#mainArticleSide .aloneA {
+    padding-bottom: 15px;
+    display: block;
 }
 
 #mainArticleSide pre {

@@ -43,7 +43,7 @@
             
 <pre>{
     elementType: "button" <span class="comment">//The type of the element.</span>
-    id: "&ltid&gt" <span class="comment">//The id of an element</span> <span class="codeNote">*1</span>
+    id: "&ltid&gt" <span class="comment">//The id of the element</span> <span class="codeNote">*1</span>
     sprite: createSprite(x, y, width, height) <span class="comment">//The sprite of the button</span>
     event: { <span class="comment">//The events for the button</span>
         mouseIsOver: function() {}, <span class="comment">//Mouse is over</span>
@@ -69,8 +69,8 @@
     group: createGroup()  <span class="comment">The group for the sprite of the button</span>
     draw: function() { <span class="comment">/*Draw the button*/</span> }
 }</pre>
-            <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using Button() it will be a random 1000 characters long string.</span></p>
-            <h2 class="secondh2">Examples</h2>
+            
+            <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using Button() it will be a random 1000 characters long string.</span></p>            <h2 class="secondh2">Examples</h2>
             <h3>Example 1: Creating a normal button</h3><br>
             <p>Code:</p>
             <figcaption>Zarkonui</figcaption>
@@ -93,10 +93,10 @@ function draw() {
 
 </pre>
             <h3>Output:</h3>
+            <a class="aloneA" href="https://studio.code.org/projects/gamelab/b-lOp3Q8-kGi_PwNuuMSwGGaYLZ1NIKnZIJHIvUrIog/">Example</a>
             <p>When mouse isn't over the button:</p>
             <figcaption class="figcap400">Zarkonui</figcaption>
             <img src="example1a.png">
-            <h3>Output:</h3>
             <p>When mouse is over the button:</p>
             <figcaption class="figcap400">Zarkonui</figcaption>
             <img src="example1b.png">
