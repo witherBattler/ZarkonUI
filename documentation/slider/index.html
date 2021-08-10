@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ZarkonUI</title>
+        <link rel="stylesheet" href="../../mainPageStyle.css">
+    </head>
+    <body>
+        <div id="leftBar">
+            <div id="leftBarTop">
+                <h3>ZarkonUI</h3>
+                <h4>By IMPixel</h4>
+            </div>
+            <div id="documentation">
+                <a id="homeButtonLeftBar" class="articleLinkLeftBar" href="../../">Home</a>
+                <p class="articleCategory">Tips</p>
+                <a class="articleLinkLeftBar" href="/documentation/gettingStarted">Getting started</a>
+                <a class="articleLinkLeftBar" href="/documentation/learnEasier">Learn easier</a>
+                <p class="articleCategory">UI elements</p>
+                <a class="articleLinkLeftBar" href="/documentation/button">Button()</a>
+                <a class="articleLinkLeftBar" href="/documentation/input">Input()</a>
+                <a class="articleLinkLeftBar" href="/documentation/slider">Slider()</a>
+                <a class="articleLinkLeftBar" href="/documentation/screen">Screen()</a>
+                <p class="articleCategory">Rendering</p>
+                <a class="articleLinkLeftBar" href="/documentation/drawElement">drawElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/drawScreen">drawScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/drawAllElements">drawAllElements()</a>
+                <p class="articleCategory">Reference</p>
+                <a class="articleLinkLeftBar" href="/documentation/getActiveElement">getActiveElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/setActiveElement">setActiveElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getCurrentScreen">getCurrentScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/setCurrentScreen">setCurrentScreen()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getScreenById">getScreenById()</a>
+                <a class="articleLinkLeftBar" href="/documentation/getElementById">getElementById()</a>
+                <a class="articleLinkLeftBar" href="/documentation/manageEventsForElement">manageEventsForElement()</a>
+                <a class="articleLinkLeftBar" href="/documentation/manage">manage()</a>
+            </div>
+        </div>
+        <div id="mainArticleSide">
+            <h1>Slider()</h1>
+            <h2>Usage: new ZarkonUI.Slider(x, y, widthThumb, heightThumb, widthTrack, heightTrack, id)</h2>
+            <p>This function creates a slider element (An object) with multiple properties, such as event and border. You can see the properties of the slider object down below. Consider checking out some example(s) as well. A slider element is made to look clean in ZarkonUI. They are easy to create using it and are easily customizable. It is extremely easy to get the value of a silder, and the best part about it is the fact that it returns a value from 0 to 100 and these values are usually much easier to work with than just the difference between the slider's left edge and the thumb, because it can never go further than 100, which makes it easy to work with RGB.</p>
+            <figcaption>Zarkonui</figcaption>
+<pre>
+{
+    elementType: "slider" <span class="comment">//The type of the element</span>
+    id: "&ltid&gt" <span class="comment">//The id of the element</span> <span class="codeNote">*1</span>
+    track: { <span class="comment">//Configurations related to the track of the slider</span>
+        sprite: createSprite() <span class="comment">//The sprite of the track</span>
+        group: createGroup() <span class="comment">//The group of the track</span>
+        event: { <span class="comment">//The events for the track</span>
+            mouseIsOver: function() {}, <span class="comment">//Mouse is over</span>
+            mouseIsOut: function() {}, <span class="comment">//Mouse is out</span>
+            mouseDown: function() {}, <span class="comment">//Mouse is down</span>
+            mouseUp: function() {}, <span class="comment">//Mouse is up</span>
+            mouseWentDown: function() {}, <span class="comment">//Mouse went down</span>
+            mouseWentUp: function() {}, <span class="comment">//Mouse went up</span>
+        }
+    }
+    thumb: { <span class="comment">//Configurations related to the thumb of the slider</span>
+        sprite: createSprite() <span class="comment">//The sprite of the thumb</span>
+        group: createGroup() <span class="comment">//The group of the thumb</span>
+        event: { <span class="comment">//The events for the thumb</span>
+            mouseIsOver: function() {}, <span class="comment">//Mouse is over</span>
+            mouseIsOut: function() {}, <span class="comment">//Mouse is out</span>
+            mouseDown: function() {}, <span class="comment">//Mouse is down</span>
+            mouseUp: function() {}, <span class="comment">//Mouse is up</span>
+            mouseWentDown: function() {}, <span class="comment">//Mouse went down</span>
+            mouseWentUp: function() {}, <span class="comment">//Mouse went up</span>
+        }
+    }
+    draw: function(newId) { <span class="comment">/*Draw the slider*/</span> } 
+    getValue: function() { <span class="comment">/*Get the value from the slider (from 0 to 100)*/</span> } 
+    clone: function() { <span class="comment">/*Clone the slider with a new ID*/</span> }
+}
+</pre>
+            <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using ZarkonUI.Slider() it will be undefined and you will run into issues while trying to use getElementById().</span></p>
+            <h2 class="secondh2">Examples</h2>
+            <h3></h3>
+        </div>
+    </body>
+</html>

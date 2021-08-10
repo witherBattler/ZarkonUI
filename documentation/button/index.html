@@ -41,7 +41,8 @@
             <p>This function creates a button element (An object) with multiple properties, such as event and border. You can see the properties of the button object down below. Consider checking out some example(s) as well.</p>
             <figcaption>Zarkonui</figcaption>
             
-<pre>{
+<pre>
+{
     elementType: "button" <span class="comment">//The type of the element.</span>
     id: "&ltid&gt" <span class="comment">//The id of the element</span> <span class="codeNote">*1</span>
     sprite: createSprite(x, y, width, height) <span class="comment">//The sprite of the button</span>
@@ -68,9 +69,11 @@
     clone: function(newId) { <span class="comment">/*Clones the button with a new ID*/</span> }
     group: createGroup()  <span class="comment">The group for the sprite of the button</span>
     draw: function() { <span class="comment">/*Draw the button*/</span> }
-}</pre>
+}
+</pre>
             
-            <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using Button() it will be a random 1000 characters long string.</span></p>            <h2 class="secondh2">Examples</h2>
+            <p><span class="codeNote"> *1: If the id wasn't specified in the 5th argument when using ZarkonUI.Button() it will be undefined and you will run into issues while trying to use getElementById().</span></p>
+            <h2 class="secondh2">Examples</h2>
             <h3>Example 1: Creating a normal button</h3><br>
             <p>Code:</p>
             <figcaption>Zarkonui</figcaption>
